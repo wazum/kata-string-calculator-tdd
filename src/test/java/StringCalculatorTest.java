@@ -8,4 +8,10 @@ public class StringCalculatorTest {
     void addEmptyStringReturnsZero() {
         assertEquals(0, StringCalculator.add(""));
     }
+
+    @Test
+    void addStringWithZeroReturnsZero ()
+    {
+        assertEquals(0, StringCalculator.add("0"));
+    }
 }
