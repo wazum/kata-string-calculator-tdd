@@ -14,4 +14,10 @@ public class StringCalculatorTest {
     {
         assertEquals(0, StringCalculator.add("0"));
     }
+
+    @Test
+    void addStringWithOneAndTwoReturnsThree ()
+    {
+        assertEquals(3, StringCalculator.add("1,2"));
+    }
 }
