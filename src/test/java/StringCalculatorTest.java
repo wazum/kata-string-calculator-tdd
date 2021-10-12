@@ -10,32 +10,38 @@ public class StringCalculatorTest {
     }
 
     @Test
-    void addStringWithZeroReturnsZero ()
-    {
+    void addStringWithZeroReturnsZero() {
         assertEquals(0, StringCalculator.add("0"));
     }
 
     @Test
-    void addStringWithOneReturnsOne ()
-    {
+    void addStringWithOneReturnsOne() {
         assertEquals(1, StringCalculator.add("1"));
     }
 
     @Test
-    void addStringWithOneAndTwoReturnsThree ()
-    {
+    void addStringWithOneAndTwoReturnsThree() {
         assertEquals(3, StringCalculator.add("1,2"));
     }
 
     @Test
-    void addStringWithSevenAndNineReturnsSixteen ()
-    {
+    void addStringWithSevenAndNineReturnsSixteen() {
         assertEquals(16, StringCalculator.add("7,9"));
     }
 
     @Test
-    void addStringWithZeroOneThreeFiveReturnsNine ()
-    {
+    void addStringWithZeroOneThreeFiveReturnsNine() {
         assertEquals(9, StringCalculator.add("0,1,3,5"));
+    }
+
+    @Test
+    void stringWithDummyTextReturnsZero() {
+        assertEquals(0, StringCalculator.add("lorem,ipsum"));
+    }
+
+    @Test
+    void stringWithDummyTextAndSevenReturnsSeven ()
+    {
+        assertEquals(7, StringCalculator.add("lorem,ipsum,7"));
     }
 }
