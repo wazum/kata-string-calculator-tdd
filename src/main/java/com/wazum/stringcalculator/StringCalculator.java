@@ -6,18 +6,17 @@ public class StringCalculator {
             return 0;
         }
 
-        if (numbers.equals("0")) {
-            return 0;
-        }
-
-        if (numbers.equals("1")) {
-            return 1;
-        }
-
         String[] values = numbers.split(",");
 
-        int number1 = Integer.parseInt(values[0]);
-        int number2 = Integer.parseInt(values[1]);
+        int number1 = 0;
+        int number2 = 0;
+
+        if (values.length > 0) {
+            number1 = Integer.parseInt(values[0]);
+        }
+        if (values.length > 1) {
+            number2 = Integer.parseInt(values[1]);
+        }
 
         return number1 + number2;
     }

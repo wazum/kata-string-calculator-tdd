@@ -26,4 +26,10 @@ public class StringCalculatorTest {
     {
         assertEquals(3, StringCalculator.add("1,2"));
     }
+
+    @Test
+    void addStringWithSevenAndNineReturnsSixteen ()
+    {
+        assertEquals(16, StringCalculator.add("7,9"));
+    }
 }
