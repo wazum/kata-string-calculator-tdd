@@ -32,4 +32,10 @@ public class StringCalculatorTest {
     {
         assertEquals(16, StringCalculator.add("7,9"));
     }
+
+    @Test
+    void addStringWithZeroOneThreeFiveReturnsNine ()
+    {
+        assertEquals(9, StringCalculator.add("0,1,3,5"));
+    }
 }

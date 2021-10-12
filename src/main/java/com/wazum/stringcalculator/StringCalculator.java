@@ -1,23 +1,24 @@
 package com.wazum.stringcalculator;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class StringCalculator {
     public static int add(String numbers) {
         if (numbers.equals("")) {
             return 0;
         }
 
-        String[] values = numbers.split(",");
+        return split(numbers)
+                .stream()
+                .mapToInt(Integer::parseInt)
+                .sum();
+    }
 
-        int number1 = 0;
-        int number2 = 0;
+    private static ArrayList<String> split(String numbers) {
+        String[] splitNumbers = numbers.split(",");
+        ArrayList<String> list = new ArrayList<>(Arrays.asList(splitNumbers));
 
-        if (values.length > 0) {
-            number1 = Integer.parseInt(values[0]);
-        }
-        if (values.length > 1) {
-            number2 = Integer.parseInt(values[1]);
-        }
-
-        return number1 + number2;
+        return list;
     }
 }
