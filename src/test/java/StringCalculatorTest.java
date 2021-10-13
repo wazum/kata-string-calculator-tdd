@@ -44,4 +44,10 @@ public class StringCalculatorTest {
     {
         assertEquals(7, StringCalculator.add("lorem,ipsum,7"));
     }
+
+    @Test
+    void stringWithNewLinesAndOneTwoThreeReturnsSix ()
+    {
+        assertEquals(6, StringCalculator.add("1\n2,3"));
+    }
 }

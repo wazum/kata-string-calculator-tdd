@@ -12,11 +12,11 @@ public class StringCalculator {
     }
 
     private static String clean(String numbers) {
-        return numbers.replaceAll("[^,\\d+]", "");
+        return numbers.replaceAll("[^,\\n+\\d+]", "");
     }
 
     private static ArrayList<String> split(String numbers) {
-        String[] splitNumbers = numbers.split(",");
+        String[] splitNumbers = numbers.split("[,\\n]");
         ArrayList<String> list = new ArrayList<>(Arrays.asList(splitNumbers));
         list.removeIf(String::isBlank);
 
